@@ -1,6 +1,7 @@
 package main.java.br.ufabc.poo.musico;
 
 import main.java.br.ufabc.poo.instrumento.Instrumento;
+import main.java.br.ufabc.poo.instrumento.SemDistorcidoException;
 
 import java.util.ArrayList;
 
@@ -16,12 +17,16 @@ public class Musico {
     public String tocarInstrumento(){
         int n = instrumentos.size();
 
-        String sons = " ";
+        String sons = "";
 
         if(n > 0) {
             for (int i = 0; i < n; i++) {
-                sons += instrumentos.get(i).emitirSom() + '\n';
-                //emitir som distorc
+                sons += instrumentos.get(i).emitirSom();
+                try{
+                    sons += instrumentos.get(i).emitirSomDistorcido();
+                } catch (SemDistorcidoException e){
+                    sons += '\n';
+                }
             }
         } else sons += "Não toca nenhum instrumento \n";
 

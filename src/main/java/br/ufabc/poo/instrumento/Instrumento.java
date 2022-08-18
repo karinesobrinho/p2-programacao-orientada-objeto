@@ -15,6 +15,10 @@ public abstract class Instrumento {
 
     public abstract String emitirSom();
 
+    public String emitirSomDistorcido() throws SemDistorcidoException{
+        throw new SemDistorcidoException();
+    }
+
     public String getMarca() {
         return marca;
     }

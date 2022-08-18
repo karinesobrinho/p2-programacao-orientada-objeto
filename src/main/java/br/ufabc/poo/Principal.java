@@ -1,5 +1,4 @@
 package main.java.br.ufabc.poo;
-
 import main.java.br.ufabc.poo.instrumento.Instrumento;
 import main.java.br.ufabc.poo.instrumento.corda.Guitarra;
 import main.java.br.ufabc.poo.instrumento.corda.Violao;
@@ -13,6 +12,8 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String args[]){
         ArrayList instrumentosMusico1 = new ArrayList<>();
+        Musico musico1 = new Musico("Fulano", instrumentosMusico1);
+        System.out.print(musico1.tocarInstrumento());
 
         Instrumento guitarra = new Guitarra("generica", 123, 6);
         instrumentosMusico1.add(guitarra);
@@ -25,7 +26,7 @@ public class Principal {
         Instrumento piano = new Piano("generica", 123, efeitos, armario, false, 2, 40);
         instrumentosMusico1.add(piano);
 
-        Musico musico1 = new Musico("Fulano", instrumentosMusico1);
+        musico1.setInstrumentos(instrumentosMusico1);
         System.out.print(musico1.tocarInstrumento());
         System.out.print(musico1.toString());
     }
