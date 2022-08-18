@@ -1,7 +1,7 @@
 package main.java.br.ufabc.poo.instrumento.piano;
 
 public class Armario {
-    String tipoMadeira;
+    private String tipoMadeira;
 
     public Armario(String tipoMadeira){
         this.tipoMadeira = tipoMadeira;

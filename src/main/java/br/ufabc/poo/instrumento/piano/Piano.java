@@ -5,11 +5,11 @@ import main.java.br.ufabc.poo.instrumento.Instrumento;
 import java.util.ArrayList;
 
 public class Piano extends Instrumento {
-    ArrayList<EfeitoSonoro> efeitosSonoros;
-    Armario armario;
-    Boolean digital;
-    int numeroPedais;
-    int numeroTeclas;
+    private ArrayList<EfeitoSonoro> efeitosSonoros;
+    private Armario armario;
+    private Boolean digital;
+    private int numeroPedais;
+    private int numeroTeclas;
 
     public Piano(String marca, long numeroLoteFabricacao, ArrayList<EfeitoSonoro> efeitosSonoros,
                  Armario armario,  Boolean digital, int numeroPedais, int numeroTeclas) {
