@@ -28,7 +28,7 @@ public class Musico {
                     sons += '\n';
                 }
             }
-        } else sons += "Não toca nenhum instrumento \n";
+        } else sons += "Não toca nenhum instrumento\n";
 
         return sons;
     }
