@@ -89,4 +89,39 @@ public class Testes {
         violao.setNumeroCordas(4);
         assertEquals(violao.getNumeroCordas(), 4, 0.0);
     }
+
+    @Test
+    public void testPiano() {
+        assertEquals(piano.toString(), "Piano da marca generica\n");
+
+        piano.setNumeroTeclas(80);
+        assertEquals(piano.getNumeroTeclas(), 80, 0.0);
+
+        piano.setNumeroPedais(4);
+        assertEquals(piano.getNumeroPedais(), 4, 0.0);
+
+        piano.setDigital(true);
+        assertEquals(piano.getDigital(), true);
+
+        assertEquals(piano.toString(), "Piano da marca generica\n");
+
+        assertEquals(piano.getEfeitosSonoros(), efeitos);
+
+        piano.adicionarEfeitoSonoro(efeito2);
+        efeitos.add(efeito2);
+
+        assertEquals(piano.getEfeitosSonoros(), efeitos);
+
+        ArrayList<EfeitoSonoro> efeTest = new ArrayList<>();
+        piano.setEfeitosSonoros(efeTest);
+
+        assertEquals(piano.getEfeitosSonoros(), efeTest);
+
+        Armario madeira = new Armario("madeira");
+        piano.setArmario(madeira);
+        assertEquals(piano.getArmario(), madeira);
+
+        madeira.setTipoMadeira("madeira2");
+        assertEquals(madeira.getTipoMadeira(), "madeira2");
+    }
 }
