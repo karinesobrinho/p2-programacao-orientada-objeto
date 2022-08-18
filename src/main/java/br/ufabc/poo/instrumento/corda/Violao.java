@@ -19,8 +19,13 @@ public class Violao extends Instrumento implements Distorcao {
     }
 
     @Override
+    public String emitirSom() {
+        return "Violão emitindo som\n";
+    }
+
+    @Override
     public String emitirSomDistorcido() {
-        return "Guitarra emitindo som distorcido";
+        return "Violão emitindo som distorcido\n";
     }
 
     @Override

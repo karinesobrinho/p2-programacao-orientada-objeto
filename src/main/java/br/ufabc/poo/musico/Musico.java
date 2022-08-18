@@ -20,10 +20,9 @@ public class Musico {
 
         if(n > 0) {
             for (int i = 0; i < n; i++) {
-                // emitir som sons += instrumentos.get(i).toString() + '\n';
+                sons += instrumentos.get(i).emitirSom() + '\n';
                 //emitir som distorc
             }
-
         } else sons += "Não toca nenhum instrumento \n";
 
         return sons;

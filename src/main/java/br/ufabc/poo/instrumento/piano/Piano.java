@@ -8,6 +8,11 @@ public class Piano extends Instrumento {
     }
 
     @Override
+    public String emitirSom() {
+        return "Piano emitindo som";
+    }
+
+    @Override
     public String toString() {
         return "Piano da marca " + this.getMarca() + "\n";
     }

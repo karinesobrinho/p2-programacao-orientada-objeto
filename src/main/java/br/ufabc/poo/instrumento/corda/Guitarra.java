@@ -19,8 +19,13 @@ public class Guitarra extends Instrumento implements Distorcao {
     }
 
     @Override
+    public String emitirSom() {
+        return "Guitarra emitindo som\n";
+    }
+
+    @Override
     public String emitirSomDistorcido() {
-        return "Guitarra emitindo som distorcido";
+        return "Guitarra emitindo som distorcido\n";
     }
 
     @Override

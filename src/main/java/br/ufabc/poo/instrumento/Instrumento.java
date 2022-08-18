@@ -13,6 +13,8 @@ public abstract class Instrumento {
 
     public abstract String toString();
 
+    public abstract String emitirSom();
+
     public String getMarca() {
         return marca;
     }
