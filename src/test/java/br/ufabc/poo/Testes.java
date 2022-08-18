@@ -1,6 +1,7 @@
 package test.java.br.ufabc.poo;
 
 import main.java.br.ufabc.poo.instrumento.Instrumento;
+import main.java.br.ufabc.poo.instrumento.SemDistorcidoException;
 import main.java.br.ufabc.poo.instrumento.corda.Guitarra;
 import main.java.br.ufabc.poo.instrumento.corda.Violao;
 import main.java.br.ufabc.poo.instrumento.piano.Armario;
@@ -123,5 +124,19 @@ public class Testes {
 
         madeira.setTipoMadeira("madeira2");
         assertEquals(madeira.getTipoMadeira(), "madeira2");
+    }
+
+    @Test
+    public void testInstrumento() {
+        piano.setMarca("nova marca");
+        assertEquals(piano.getMarca(), "nova marca");
+
+        piano.setNumeroLoteFabricacao(345);
+        assertEquals(piano.getNumeroLoteFabricacao(), 345, 0.0);
+    }
+
+    @Test(expected = SemDistorcidoException.class)
+    public void testException() {
+        assertEquals(piano.emitirSomDistorcido(), "Sem som distorcido");
     }
 }
