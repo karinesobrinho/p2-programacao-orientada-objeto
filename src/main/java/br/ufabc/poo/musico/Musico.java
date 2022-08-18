@@ -40,10 +40,10 @@ public class Musico {
 
         if(n > 0) {
             for (int i = 0; i < n; i++) {
-                mostraInfo += instrumentos.get(i).toString() + '\n';
+                mostraInfo += instrumentos.get(i).toString() ;
             }
 
-        } else mostraInfo += "ainda nenhum instrumento \n";
+        } else mostraInfo += "ainda nenhum instrumento\n";
 
         return mostraInfo;
     }

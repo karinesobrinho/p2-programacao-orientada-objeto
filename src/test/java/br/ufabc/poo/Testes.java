@@ -39,8 +39,38 @@ public class Testes {
     }
 
     @Test
-    public void test() {
+    public void testTocarInstrumento() {
         assertEquals(musico.tocarInstrumento(), "Não toca nenhum instrumento\n");
 
+        instrumentos.add(guitarra);
+        instrumentos.add(violao);
+        instrumentos.add(piano);
+
+        assertEquals(musico.tocarInstrumento(),
+                "Guitarra emitindo som\n" +
+                "Guitarra emitindo som distorcido\n" +
+                "Violão emitindo som\n" +
+                "Violão emitindo som distorcido\n" +
+                "Piano emitindo som\n");
+
+        musico.setInstrumentos(new ArrayList<>());
+        assertEquals(musico.tocarInstrumento(), "Não toca nenhum instrumento\n");
+    }
+
+    @Test
+    public void testMusicoToString() {
+        assertEquals(musico.getNome(), "musico");
+        musico.setNome("novo musico");
+        assertEquals(musico.getNome(), "novo musico");
+
+        assertEquals(musico.toString(), "Musico: novo musico\n" +
+                "Toca: ainda nenhum instrumento\n");
+
+        assertEquals(musico.getInstrumentos(), instrumentos);
+
+        instrumentos.add(piano);
+
+        assertEquals(musico.toString(), "Musico: novo musico\n" +
+                "Toca: Piano da marca generica\n");
     }
 }
