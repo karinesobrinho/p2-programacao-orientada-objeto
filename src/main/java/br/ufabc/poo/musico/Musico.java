@@ -12,6 +12,37 @@ public class Musico {
         this.nome = nome;
         this.instrumentos = instrumentos;
     }
+    
+    public String tocarInstrumento(){
+        int n = instrumentos.size();
+
+        String sons = " ";
+
+        if(n > 0) {
+            for (int i = 0; i < n; i++) {
+                // emitir som sons += instrumentos.get(i).toString() + '\n';
+                //emitir som distorc
+            }
+
+        } else sons += "Não toca nenhum instrumento \n";
+
+        return sons;
+    }
+
+    public String toString() {
+        String mostraInfo = "Musico: " + this.nome + "\nToca: ";
+
+        int n = instrumentos.size();
+
+        if(n > 0) {
+            for (int i = 0; i < n; i++) {
+                mostraInfo += instrumentos.get(i).toString() + '\n';
+            }
+
+        } else mostraInfo += "ainda nenhum instrumento \n";
+
+        return mostraInfo;
+    }
 
     public String getNome() {
         return nome;

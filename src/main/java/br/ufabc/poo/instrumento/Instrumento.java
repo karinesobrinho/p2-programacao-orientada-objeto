@@ -11,6 +11,8 @@ public abstract class Instrumento {
         this.numeroLoteFabricacao = numeroLoteFabricacao;
     }
 
+    public abstract String toString();
+
     public String getMarca() {
         return marca;
     }

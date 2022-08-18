@@ -22,4 +22,9 @@ public class Violao extends Instrumento implements Distorcao {
     public String emitirSomDistorcido() {
         return "Guitarra emitindo som distorcido";
     }
+
+    @Override
+    public String toString() {
+        return "Violão da marca " + this.getMarca() + "\n";
+    }
 }
