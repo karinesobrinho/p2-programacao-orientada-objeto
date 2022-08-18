@@ -17,13 +17,13 @@ import static org.junit.Assert.assertEquals;
 public class Testes {
     ArrayList<Instrumento> instrumentos;
     Musico musico;
-    Instrumento guitarra;
-    Instrumento violao;
+    Guitarra guitarra;
+    Violao violao;
     EfeitoSonoro efeito1;
     EfeitoSonoro efeito2;
     ArrayList efeitos;
     Armario armario;
-    Instrumento piano;
+    Piano piano;
 
     @Before
     public void inicializacao(){
@@ -72,5 +72,21 @@ public class Testes {
 
         assertEquals(musico.toString(), "Musico: novo musico\n" +
                 "Toca: Piano da marca generica\n");
+    }
+
+    @Test
+    public void testGuitarra() {
+        assertEquals(guitarra.toString(), "Guitarra da marca generica\n");
+
+        guitarra.setNumeroCordas(4);
+        assertEquals(guitarra.getNumeroCordas(), 4, 0.0);
+    }
+
+    @Test
+    public void testViolao() {
+        assertEquals(violao.toString(), "Violão da marca generica\n");
+
+        violao.setNumeroCordas(4);
+        assertEquals(violao.getNumeroCordas(), 4, 0.0);
     }
 }
